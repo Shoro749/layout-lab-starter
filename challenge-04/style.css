@@ -1,0 +1,32 @@
+/* Challenge 4. Subgrid: aligned cards.
+   Спочатку — рішення без subgrid, потім — із subgrid.
+   Ваш CSS — тут. */
+
+.cards {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   gap: 1.5rem;
+}
+
+.card {
+   display: flex;
+   flex-direction: column;
+}
+
+.button {
+   margin-top: auto;
+}
+
+/* .cards {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: auto auto auto;
+   gap: 1rem;
+}
+
+.card {
+   display: grid;
+   grid-row: span 3;
+   grid-template-rows: subgrid;
+   gap: 0.5rem;
+} */

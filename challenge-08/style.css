@@ -1,0 +1,35 @@
+/* Challenge 8. Debug the Layout.
+   Цей файл містить навмисно закладені помилки. Знайдіть першопричину кожної
+   в DevTools і внесіть мінімальну зміну. overflow-x: hidden — не виправлення. */
+
+.page {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(180px, 250px) 1fr;
+}
+
+.sidebar {
+  padding: 1rem;
+  background: var(--surface);
+}
+
+.main {
+  width: 100%;
+  padding: 1rem;
+  min-width: 0;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.card {
+  flex: 1 1 250px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw + 1rem, 4rem);
+}

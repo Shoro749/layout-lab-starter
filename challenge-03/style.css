@@ -1,0 +1,75 @@
+/* Challenge 3. Responsive page layout: Grid + Flexbox.
+   Ваш CSS — тут. */
+
+   .page {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+   }
+
+   .site-header {
+      grid-column: span 3;
+   }
+
+   .sidebar {
+      grid-row: 2;
+      grid-column: 1;
+   }
+
+   .main {
+      grid-row: 2;
+      grid-column: span 2 ;
+   }
+
+   .site-footer {
+      display: flex;
+      justify-content: center;
+      grid-row: 3;
+      grid-column: span 3;
+   }
+
+   @media (max-width: 768px) {
+      .page {
+          grid-template-columns: 1fr;
+      }
+
+      .site-header {
+         grid-row: 1;
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 1rem;
+      }
+
+      .main {
+        grid-row: 2;
+        grid-column: 1;
+      }
+
+      .sidebar {
+         grid-row: 3;
+         grid-column: 1;
+      }
+
+      .site-footer {
+         grid-row: 4;
+         grid-column: 1;
+      }
+   }
+
+   .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid #e2e8f0;
+   }
+
+   .navigation {
+      display: flex;
+      gap: 1.5rem;
+   }
+
+   .actions {
+      display: flex;
+      gap: 0.75rem;
+   }
